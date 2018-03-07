@@ -25,6 +25,7 @@ git clone https://github.com/jpmorganchase/quorum.git
 cd quorum/
 git checkout 0905eda48eb07a4ce0e7072c1a2ecbf690ddff77
 make all
+///////////worked this far
 echo "PATH=\$PATH:"$PWD/build/bin >> ~/.bashrc
 source ~/.bashrc
 export PATH=$PWD/build/bin:$PATH

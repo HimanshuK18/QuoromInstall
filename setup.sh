@@ -11,9 +11,9 @@ sudo rm -rf go/ go1.9.4.linux-amd64.tar.gz
 sudo echo "export GOROOT=/usr/local/go" >> ~/.bashrc
 sudo echo "export GOPATH=$HOME/projects/go" >> ~/.bashrc
 sudo echo "PATH=\$PATH:/usr/local/go/bin" >> ~/.bashrc
-sudo export GOROOT=/usr/local/go
-sudo export GOPATH=$HOME/projects/go
-sudo export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+ export GOROOT=/usr/local/go
+ export GOPATH=$HOME/projects/go
+ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 sudo apt-get install -y software-properties-common
 sudo add-apt-repository -y ppa:ethereum/ethereum

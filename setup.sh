@@ -22,32 +22,32 @@ sudo apt-get install -y ethereum
 sudo mv /usr/bin/geth /usr/bin/normalGeth
 
 sudo  git clone https://github.com/jpmorganchase/quorum.git
-sudo cd quorum/
+ cd quorum
 sudo git checkout 0905eda48eb07a4ce0e7072c1a2ecbf690ddff77
 make all
 ///////////worked this far
 sudo  echo "PATH=\$PATH:"$PWD/build/bin >> ~/.bashrc
-sudo source ~/.bashrc
-sudo export PATH=$PWD/build/bin:$PATH
+source ~/.bashrc
+export PATH=$PWD/build/bin:$PATH
 
-sudo cd ..
+ cd ..
 sudo mkdir -p constellation && cd constellation/
 sudo apt-get install -y unzip libdb-dev libleveldb-dev libsodium-dev zlib1g-dev libtinfo-dev
 sudo wget https://github.com/jpmorganchase/constellation/releases/download/v0.1.0/constellation-0.1.0-ubuntu1604.tar.xz -O constellation-0.1.0-ubuntu1604.tar.xz
 sudo  tar -xf constellation-0.1.0-ubuntu1604.tar.xz
 sudo chmod +x constellation-0.1.0-ubuntu1604/constellation-node
 sudo echo "PATH=\$PATH:"$PWD/constellation-0.1.0-ubuntu1604 >> ~/.bashrc
-sudo source ~/.bashrc
-sudo export PATH=$PWD/constellation-0.1.0-ubuntu1604:$PATH
+ source ~/.bashrc
+export PATH=$PWD/constellation-0.1.0-ubuntu1604:$PATH
 
-sudo OLD_GOPATH=$GOPATH
+ OLD_GOPATH=$GOPATH
 sudo GOPATH=$PWD/istanbul-tools go get github.com/getamis/istanbul-tools/cmd/istanbul
 sudo echo "PATH=\$PATH:"$PWD/istanbul-tools/bin >> ~/.bashrc
-sudo export PATH=$PWD/istanbul-tools/bin:$PATH
-sudo GOPATH=$OLD_GOPATH
+ export PATH=$PWD/istanbul-tools/bin:$PATH
+ GOPATH=$OLD_GOPATH
 
 cd ..
 sudo git clone https://github.com/consensys/QuorumNetworkManager.git
-sudo cd QuorumNetworkManager/
+ cd QuorumNetworkManager/
 sudo git checkout v0.7.2-alpha
 sudo npm install

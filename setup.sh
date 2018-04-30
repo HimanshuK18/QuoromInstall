@@ -21,7 +21,7 @@ sudo add-apt-repository -y ppa:ethereum/ethereum
 sudo apt-get update
 sudo apt-get install -y ethereum
 //sudo mv /usr/bin/geth /usr/bin/normalGeth
-//???????????????????????????????????????????????????????????????????????///////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////worked this far 1
 sudo  git clone https://github.com/jpmorganchase/quorum.git
  cd quorum
 sudo git checkout 0905eda48eb07a4ce0e7072c1a2ecbf690ddff77
@@ -30,7 +30,7 @@ make all
 sudo  echo "PATH=\$PATH:"$PWD/build/bin >> ~/.bashrc
 source ~/.bashrc
 export PATH=$PWD/build/bin:$PATH
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.//////
+////////////////////////////////////////////////////////////////////////////////////////////////////////worked this far 2
  cd ..
 sudo mkdir -p constellation && cd constellation/
 sudo apt-get install -y unzip libdb-dev libleveldb-dev libsodium-dev zlib1g-dev libtinfo-dev
@@ -40,15 +40,15 @@ sudo chmod +x constellation-0.1.0-ubuntu1604/constellation-node
 sudo echo "PATH=\$PATH:"$PWD/constellation-0.1.0-ubuntu1604 >> ~/.bashrc
  source ~/.bashrc
 export PATH=$PWD/constellation-0.1.0-ubuntu1604:$PATH
-//#################################################################################///////////////////////////////////////////////////
  OLD_GOPATH=$GOPATH
 sudo GOPATH=$PWD/istanbul-tools go get github.com/getamis/istanbul-tools/cmd/istanbul
 sudo echo "PATH=\$PATH:"$PWD/istanbul-tools/bin >> ~/.bashrc
  export PATH=$PWD/istanbul-tools/bin:$PATH
  GOPATH=$OLD_GOPATH
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////worked this far 3
 cd ..
 sudo git clone https://github.com/consensys/QuorumNetworkManager.git
  cd QuorumNetworkManager/
 sudo git checkout v0.7.2-alpha
 sudo npm install
+////////////////////////////////////////////////////////////////////////////////////////////////////////worked this far 4

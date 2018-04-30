@@ -19,7 +19,7 @@ sudo apt-get install -y software-properties-common
 sudo add-apt-repository -y ppa:ethereum/ethereum
 sudo apt-get update
 sudo apt-get install -y ethereum
-sudo mv /usr/bin/geth /usr/bin/normalGeth
+//sudo mv /usr/bin/geth /usr/bin/normalGeth
 
 sudo  git clone https://github.com/jpmorganchase/quorum.git
  cd quorum

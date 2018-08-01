@@ -25,18 +25,19 @@ echo "**************************Worked this far 2*******************************
 sudo  git clone https://github.com/jpmorganchase/quorum.git
  cd quorum
 sudo git checkout 0905eda48eb07a4ce0e7072c1a2ecbf690ddff77
-make all
-///////////worked this far
+sudo make all
+echo "**************************Worked this far 3**********************************************************"
 sudo  echo "PATH=\$PATH:"$PWD/build/bin >> ~/.bashrc
 source ~/.bashrc
 export PATH=$PWD/build/bin:$PATH
-echo "**************************Worked this far 3**********************************************************"
+echo "**************************Worked this far 4**********************************************************"
  cd ..
 sudo mkdir -p constellation && cd constellation/
 sudo apt-get install -y unzip libdb-dev libleveldb-dev libsodium-dev zlib1g-dev libtinfo-dev
 sudo wget https://github.com/jpmorganchase/constellation/releases/download/v0.1.0/constellation-0.1.0-ubuntu1604.tar.xz -O constellation-0.1.0-ubuntu1604.tar.xz
 sudo  tar -xf constellation-0.1.0-ubuntu1604.tar.xz
 sudo chmod +x constellation-0.1.0-ubuntu1604/constellation-node
+echo "**************************Worked this far 5**********************************************************"
 sudo echo "PATH=\$PATH:"$PWD/constellation-0.1.0-ubuntu1604 >> ~/.bashrc
  source ~/.bashrc
 export PATH=$PWD/constellation-0.1.0-ubuntu1604:$PATH
@@ -45,10 +46,10 @@ sudo GOPATH=$PWD/istanbul-tools go get github.com/getamis/istanbul-tools/cmd/ist
 sudo echo "PATH=\$PATH:"$PWD/istanbul-tools/bin >> ~/.bashrc
  export PATH=$PWD/istanbul-tools/bin:$PATH
  GOPATH=$OLD_GOPATH
-echo "**************************Worked this far 4**********************************************************"
+echo "**************************Worked this far 6**********************************************************"
 cd ..
 sudo git clone https://github.com/consensys/QuorumNetworkManager.git
  cd QuorumNetworkManager/
 sudo git checkout v0.7.2-alpha
 sudo npm install
-echo "**************************Worked this far 5**********************************************************"
+echo "**************************Worked this far 7**********************************************************"

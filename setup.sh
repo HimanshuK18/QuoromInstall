@@ -1,6 +1,5 @@
 #!/bin/bash
-sudo i
-cd /home/ubuntu
+
 sudo apt-get update
 sudo apt-get install -y build-essential libssl-dev git curl
 
